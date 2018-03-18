@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B0353A842B52E2C2558E7C /* libPods-aircast-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1085776F44F778385BA19 /* libPods-aircast-demo.a */; };
 		F0A4030D205EAC8000BB7ED7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A4030C205EAC8000BB7ED7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14804B83CF31BECEDF68885E /* Pods-aircast-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aircast-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-aircast-demo/Pods-aircast-demo.release.xcconfig"; sourceTree = "<group>"; };
+		A6EC596D53C1EA59219C4378 /* Pods-aircast-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aircast-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aircast-demo/Pods-aircast-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		ECE1085776F44F778385BA19 /* libPods-aircast-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aircast-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A40309205EAC8000BB7ED7 /* aircast-demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "aircast-demo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A4030C205EAC8000BB7ED7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B0353A842B52E2C2558E7C /* libPods-aircast-demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96395C02A4B6F5025F5836E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECE1085776F44F778385BA19 /* libPods-aircast-demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5281E97FD843E086B504ACD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6EC596D53C1EA59219C4378 /* Pods-aircast-demo.debug.xcconfig */,
+				14804B83CF31BECEDF68885E /* Pods-aircast-demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0A40300205EAC8000BB7ED7 = {
 			isa = PBXGroup;
 			children = (
 				F0A4030B205EAC8000BB7ED7 /* aircast-demo */,
 				F0A4030A205EAC8000BB7ED7 /* Products */,
+				B5281E97FD843E086B504ACD /* Pods */,
+				96395C02A4B6F5025F5836E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0A40310205EAC8000BB7ED7 /* Build configuration list for PBXNativeTarget "aircast-demo" */;
 			buildPhases = (
+				014FB3A56DD57107FDB09C79 /* [CP] Check Pods Manifest.lock */,
 				F0A40305205EAC8000BB7ED7 /* Sources */,
 				F0A40306205EAC8000BB7ED7 /* Frameworks */,
 				F0A40307205EAC8000BB7ED7 /* CopyFiles */,
+				7E08BDB0C50F6E5B67AEBBBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -112,6 +138,42 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		014FB3A56DD57107FDB09C79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aircast-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E08BDB0C50F6E5B67AEBBBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aircast-demo/Pods-aircast-demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0A40305205EAC8000BB7ED7 /* Sources */ = {
@@ -236,6 +298,7 @@
 		};
 		F0A40311205EAC8000BB7ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6EC596D53C1EA59219C4378 /* Pods-aircast-demo.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLKRLU8RPY;
@@ -245,6 +308,7 @@
 		};
 		F0A40312205EAC8000BB7ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14804B83CF31BECEDF68885E /* Pods-aircast-demo.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLKRLU8RPY;
