@@ -26,8 +26,8 @@ then
 ```
 
 
-** This demo is command line app, before you run you need copy aircast_sdk_mac.framework to **
-** DerivedData/aircast-demo/Build/Products/Debug/ or DerivedData/aircast-demo/Build/Products/Release/**
+**This demo is command line app, before you run you need copy aircast_sdk_mac.framework to**
+**DerivedData/aircast-demo/Build/Products/Debug/ or DerivedData/aircast-demo/Build/Products/Release/**
 
 
 ## Docs 
